@@ -62,6 +62,7 @@ function App() {
                 {Array.from({ length: hasilSimulasi.jangka }, (_, i) => {
                   const angsuranKe = i + 1;
                   const tanggalSekarang = new Date();
+
                   // Tambah bulan sesuai urutan angsuran
                   const jatuhTempo = new Date(
                     tanggalSekarang.getFullYear(),
@@ -69,10 +70,13 @@ function App() {
                     tanggalSekarang.getDate()
                   );
 
-                  // Format tanggal ke YYYY-MM-DD
-                  const formattedTanggal = jatuhTempo
-                    .toISOString()
-                    .split("T")[0];
+                  // Format tanggal ke YYYY-MM-DD (lokal)
+                  const formattedTanggal = `${jatuhTempo.getFullYear()}-${String(
+                    jatuhTempo.getMonth() + 1
+                  ).padStart(2, "0")}-${String(jatuhTempo.getDate()).padStart(
+                    2,
+                    "0"
+                  )}`;
 
                   return (
                     <TableRow key={angsuranKe}>
