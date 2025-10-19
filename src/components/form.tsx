@@ -84,7 +84,7 @@ export function Form({ onResult }: FormProps) {
   };
 
   return (
-    <div className="border rounded-lg shadow-sm p-6 w-1/3 min-w-1/3">
+    <div className="border rounded-lg shadow-sm p-6 lg:w-1/3 lg:min-w-1/3">
       <h1 className="text-2xl font-semibold mb-4 text-center">
         Simulasi Angsuran
       </h1>
