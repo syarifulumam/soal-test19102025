@@ -18,11 +18,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="max-w-full mx-auto flex gap-4 p-4">
+      <div className="max-w-full mx-auto lg:flex lg:gap-4 p-4">
         <Form onResult={setHasilSimulasi} />
 
         {hasilSimulasi && (
-          <div className="w-full border rounded-lg shadow-sm p-6 overflow-x-auto">
+          <div className="w-full border rounded-lg shadow-sm p-6 overflow-x-auto mt-2 lg:mt-0">
             <h2 className="text-xl font-semibold mb-4 text-center">
               Hasil Perhitungan
             </h2>
